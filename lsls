@@ -1,0 +1,120 @@
+[33mcommit 40f18bce2fd404bc465a8b9a19045708cdca2d50[m
+Author: arnabuchiha <arnabkeya04@gmail.com>
+Date:   Fri Dec 21 22:53:50 2018 +0530
+
+    new
+
+[1mdiff --git a/Traffic_Sign_Classifier.ipynb b/Traffic_Sign_Classifier.ipynb[m
+[1mindex b44a7ae..a5f533e 100755[m
+[1m--- a/Traffic_Sign_Classifier.ipynb[m
+[1m+++ b/Traffic_Sign_Classifier.ipynb[m
+[36m@@ -33,20 +33,26 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {[m
+[31m-    "collapsed": false[m
+[31m-   },[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "execution_count": 13,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "(34799, 32, 32, 3)\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "# Load pickled data\n",[m
+     "import pickle\n",[m
+     "\n",[m
+     "# TODO: Fill this in based on where you saved the training and testing data\n",[m
+     "\n",[m
+[31m-    "training_file = ?\n",[m
+[31m-    "validation_file=?\n",[m
+[31m-    "testing_file = ?\n",[m
+[32m+[m[32m    "training_file = \"traffic-signs-data\\\\train.p\"\n",[m
+[32m+[m[32m    "validation_file= \"traffic-signs-data\\\\valid.p\"\n",[m
+[32m+[m[32m    "testing_file = \"traffic-signs-data\\\\test.p\"\n",[m
+     "\n",[m
+     "with open(training_file, mode='rb') as f:\n",[m
+     "    train = pickle.load(f)\n",[m
+[36m@@ -57,7 +63,8 @@[m
+     "    \n",[m
+     "X_train, y_train = train['features'], train['labels']\n",[m
+     "X_valid, y_valid = valid['features'], valid['labels']\n",[m
+[31m-    "X_test, y_test = test['features'], test['labels']"[m
+[32m+[m[32m    "X_test, y_test = test['features'], test['labels']\n",[m
+[32m+[m[32m    "print(X_train.shape)"[m
+    ][m
+   },[m
+   {[m
+[36m@@ -87,29 +94,38 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {[m
+[31m-    "collapsed": true[m
+[31m-   },[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "execution_count": 17,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "Number of training examples = 34799\n",[m
+[32m+[m[32m      "Number of testing examples = 12630\n",[m
+[32m+[m[32m      "Image data shape = (32, 32, 3)\n",[m
+[32m+[m[32m      "Number of classes = 43\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "### Replace each question mark with the appropriate value. \n",[m
+     "### Use python, pandas or numpy methods rather than hard coding the results\n",[m
+[31m-    "\n",[m
+[32m+[m[32m    "import numpy as np\n",[m
+     "# TODO: Number of training examples\n",[m
+[31m-    "n_train = ?\n",[m
+[32m+[m[32m    "n_train = len(X_train)\n",[m
+     "\n",[m
+     "# TODO: Number of validation examples\n",[m
+[31m-    "n_validation = ?\n",[m
+[32m+[m[32m    "n_validation = len(X_valid)\n",[m
+     "\n",[m
+     "# TODO: Number of testing examples.\n",[m
+[31m-    "n_test = ?\n",[m
+[32m+[m[32m    "n_test = len(X_test)\n",[m
+     "\n",[m
+     "# TODO: What's the shape of an traffic sign image?\n",[m
+[31m-    "image_shape = ?\n",[m
+[32m+[m[32m    "image_shape = X_train[1].shape\n",[m
+     "\n",[m
+     "# TODO: How many unique classes/labels there are in the dataset.\n",[m
+[31m-    "n_classes = ?\n",[m
+[32m+[m[32m    "n_classes = len(np.unique(y_train))\n",[m
+     "\n",[m
+     "print(\"Number of training examples =\", n_train)\n",[m
+     "print(\"Number of testing examples =\", n_test)\n",[m
+[36m@@ -137,17 +153,37 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 16,[m
+[31m-   "metadata": {[m
+[31m-    "collapsed": true[m
+[31m-   },[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "execution_count": 25,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "data": {[m
+[32m+[m[32m      "image/png": "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
