@@ -1,6 +1,6 @@
 
 # Self-Driving Car Engineer Nanodegree
-
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 ## Deep Learning
 
 ## Project: Build a Traffic Sign Recognition Classifier
@@ -39,12 +39,12 @@ Visualize the German Traffic Signs Dataset using the pickled file(s). This is op
 
 The following figure shows the data visualization with the labels on X-axis
 
-![png](output_8_0.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_8_0.png)
 
 Here are few example training data
 
 
-![png](output_9_0.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_9_0.png)
 
 
 ----
@@ -272,11 +272,11 @@ plt.show()
 ```
 
 
-![png](output_22_0.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_22_0.png)
 
 
 
-![png](output_22_1.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_22_1.png)
 
 
 ---
@@ -285,16 +285,14 @@ plt.show()
 
 Six new images are accured from Google images as shown 
 
-![png](output_25_1.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_25_1.png)
 
 
 ## Step 8: Performance on new images
 
 
 ```python
-### Run the predictions here and use the model to output the prediction for each image.
-### Make sure to pre-process the images with the same pre-processing pipeline used earlier.
-### Feel free to use as many code cells as needed.
+
 test_data=np.uint8(np.zeros((6,32,32,3)))
 for i in range(num_test_img):
     test_data[i] = test_img[i]
@@ -319,7 +317,7 @@ plt.show()
     
 
 
-![png](output_27_1.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_27_1.png)
 
 
 ### Analyze Performance
@@ -345,50 +343,50 @@ The top five softmax probabilities of the predictions on the captured images are
 
 
 
-![png](output_32_1.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_1.png)
 
 
 
-![png](output_32_2.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_2.png)
 
 
 
-![png](output_32_3.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_3.png)
 
 
 
-![png](output_32_4.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_4.png)
 
 
 
-![png](output_32_5.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_5.png)
 
 
 
-![png](output_32_6.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_6.png)
 
 
 
-![png](output_32_7.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_7.png)
 
 
 
-![png](output_32_8.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_8.png)
 
 
 
-![png](output_32_9.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_9.png)
 
 
 
-![png](output_32_10.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_10.png)
 
 
 
-![png](output_32_11.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_11.png)
 
 
 
-![png](output_32_12.png)
+![png](https://raw.githubusercontent.com/arnabuchiha/Traffic-Sign-Classifier/master/writeup_stuffs/output_32_12.png)
 
 
